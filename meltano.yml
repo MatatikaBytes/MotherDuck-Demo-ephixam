@@ -5,6 +5,10 @@ environments:
 - name: staging
 - name: prod
 plugins:
+  extractors:
+  - name: tap-mysql
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/pipelinewise-tap-mysql.git@v2.0.0
   loaders:
   - name: target-motherduck
     variant: meltanolabs
@@ -20,4 +24,13 @@ plugins:
   - name: files-dbt
     variant: matatika
     pip_url: git+https://github.com/Matatika/files-dbt@v1.5
+    lock: true
+  utilities:
+  - name: matatika
+    variant: matatika
+    pip_url: matatika~=1.17.1
+    lock: true
+  - name: dbt-artifacts
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/dbt-artifacts-ext.git@v0.1.0
     lock: true
