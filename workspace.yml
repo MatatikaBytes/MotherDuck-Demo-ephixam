@@ -3,8 +3,8 @@ name: MotherDuck Demo
 meltano_version: V4_2
 app_properties:
   WELCOME_DATASET_ALIAS: welcome
-default_data_store: Warehouse
-state_data_store: Warehouse
+default_data_store: MotherDuck
+state_data_store: MotherDuck
 dataset_paths:
 - analyze/datasets
 - .meltano/analyze/datasets
